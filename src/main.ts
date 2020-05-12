@@ -6,10 +6,10 @@ async function bootstrap() {
   const app        = await NestFactory.createApplicationContext(AppModule);
   const appService = app.get(AppService);
 
-  appService.addStore();
+  appService.addCat();
 
   setTimeout(() => {
-    appService.addStore();
+    appService.addCat();
   }, 5000);
 }
 
