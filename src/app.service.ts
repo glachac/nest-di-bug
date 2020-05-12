@@ -12,7 +12,7 @@ export class AppService {
 
   async addCat() {
     this.logger.log('`addCat()` called, should create a `CatService` and a `CatPetService` now...')
-    const catService = await this.moduleRef.create(CatService);
+    const catService = await this.moduleRef.resolve(CatService);
     catService.meow();
     catService.pet();
   }
